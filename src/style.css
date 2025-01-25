@@ -56,9 +56,8 @@ body {
 }
 
 .global__btn:hover {
-    border-color: #2c7c8c;
+    border-color: #2a8597;
     color: #2a8597;
-    box-shadow: 0 0 5px 0 black;
 }
 
 ul,
@@ -170,10 +169,11 @@ p {
 .block {
     flex-grow: 1;
     background-image: url("../public/images/top-bg.jpg");
-    height: calc(100vh - 140px);
+    min-height: calc(100vh - 140px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
 }
 
 
@@ -192,6 +192,12 @@ p {
     display: flex;
     align-items: center;
     gap: 0 40px;
+}
+
+.header__btns-link:hover,
+.header__btns-text:hover {
+    text-decoration: underline 2px solid;
+    text-underline-offset: 3px;
 }
 
 .header__btns-auth {
@@ -292,8 +298,8 @@ p {
     height: 140px;
     display: flex;
     align-items: center;
-
     justify-content: space-between;
+    
 }
 
 .main {}
@@ -314,7 +320,7 @@ p {
 .products__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 28px;
 }
 
@@ -343,6 +349,10 @@ p {
     align-items: center;
     justify-content: center;
     gap: 17px 30px;
+}
+
+.products__item { 
+    width: calc((100% - 30px * 2) / 3);
 }
 
 .products__item-cart {
@@ -432,7 +442,7 @@ p {
 }
 
 .products__item-actions {
-    margin-block: auto 0;
+    margin-block: auto 20px;
 }
 
 .products__item-actions {
@@ -448,7 +458,6 @@ p {
     width: 38px;
     height: 38px;
     border-radius: 2px;
-    margin-bottom: 20px;
 }
 
 .products__item-information {
@@ -636,6 +645,7 @@ p {
 }
 
 .subscribe__form-input {
+    outline: none;
     border: none;
     border-radius: 50px;
     width: 300px;
@@ -755,6 +765,11 @@ p {
     letter-spacing: 0.7px;
 }
 
+.footer__link:hover {
+    text-decoration: underline 2px solid;
+    text-underline-offset: 3px;
+}
+
 .footer__column-two {}
 
 .footer__column-text {
@@ -813,4 +828,9 @@ p {
     text-align: center;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
+}
+
+@media (max-width:900px) {
+    .sponsors__list { flex-wrap: wrap; gap: 30px; justify-content: start; height: auto;}
+
 }
