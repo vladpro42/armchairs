@@ -1,14 +1,11 @@
-import "./normalize.css";
-import "./style.css";
-import "./scripts/ui";
-
 const headerMobile = document.querySelector(".header-mobile");
 const bg = document.querySelector(".bg");
 const close = document.querySelector(".header-mobile__item-close");
 const burger = document.querySelector(".burger");
 
 // Функция для открытия меню
-function openMenu() {
+function openMenu(event) {
+  console.log(event)
   headerMobile.classList.add("active");
   bg.classList.add("active");
 }
